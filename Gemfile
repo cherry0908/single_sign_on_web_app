@@ -41,3 +41,6 @@ group :development do
   gem 'rails-footnotes'
 end
 
+group :staging, :production do
+  gem 'rails_12factor'
+end
