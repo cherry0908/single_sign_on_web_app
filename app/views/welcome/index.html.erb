@@ -1,8 +1,9 @@
 <% if user_signed_in? %>
 	<h1>Hello, World!</h1>
-	<%= link_to 'Sign Out', destroy_user_session_path, method: :delete, :class => "sign_out_link" %></li>
+	<%= link_to 'Log Out', destroy_user_session_path, method: :delete, :class => "sign_out_link" %></li>
+	<%= render "user_list" %>
  <% else %>
  	<h1>Welcome!</h1>
- 	<%= link_to "Sign In", new_user_session_url %></li>
- 	<%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path %></li>
+ 	<%= link_to "Log in", new_user_session_url %></li>
+ 	<%= link_to "Log in with Facebook", user_facebook_omniauth_authorize_path %></li>
 <% end %>
